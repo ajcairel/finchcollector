@@ -22,7 +22,7 @@ squishes = [
 ]
 
 def home(request):
-    return HttpResponse('<h1> Squish Boi </h1>')
+    return HttpResponse('<h1> Squish Boi </h1> <li><a href="/about">About</a></li><li><a href="/squishes">View All My Squishes</a></li>')
 
 def about(request):
     return render(request, 'about.html')
