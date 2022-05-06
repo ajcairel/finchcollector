@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Squish List</h1>
+
+{% for squish in squishes %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ squish.name }}</span>
+      <p>Size: {{ squish.size }}</p>
+      <p>Squad: {{ squish.squad }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}

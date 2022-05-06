@@ -2,7 +2,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url('https://preview.redd.it/lwpedvvk6ua21.jpg?auto=webp&s=5af4c967c24abd1adcf62a7b8aee65c2fd6039a5') ;
+    background-image: url('https://imgix.bustle.com/scary-mommy/2021/09/01/Squishmallow-Feature.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg');
+    background-size: cover;
   }
   
   main {

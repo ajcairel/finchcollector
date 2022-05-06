@@ -3,23 +3,31 @@ from django.http import HttpResponse
 
 # Create your views here.
 # Add the Cat class & list and view function below the imports
-class Finch:  # Note that parens are optional if not inheriting from another class
-  def __init__(self, name, science, habitat, behavior):
+class Squishmallow:  # Note that parens are optional if not inheriting from another class
+  def __init__(self, name, size, squad):
     self.name = name
-    self.science = science
-    self.habitat = habitat
-    self.behavior = behavior
+    self.size = size
+    self.squad = squad
+  
 
-finches = [
-    Finch('American Goldfinch', 'Spinus tristis', 'Open Woodlands', 'Foliage Gleaner'),
-    Finch('Black Rosy-Finch', 'Leucosticte atrata', 'Tundra', 'Ground Forager'),
-    Finch('Blue Grosbeak', 'Passerina caerulea', 'Open Woodlands', 'Foliage Gleaner'),
-    Finch('Cassia Crossbill', 'Loxia sinesciuris', 'Forests', 'Foliage Gleaner'),
-    Finch('Northern Cardinal', 'Cardinalis cardinalis', 'Open Woodlands', 'Ground Forager')
+squishes = [
+    Squishmallow('Harrison the Dog', '7.5" Hug Me', 'None'),
+    Squishmallow('Candess The Cow', '8"', 'None'),
+    Squishmallow('Bop The Bunny', '16"', 'Easter'),
+    Squishmallow('Malcom the Mushroom', '16"', 'None'),
+    Squishmallow('Gary the Giraffe', '7"', 'None'),
+    Squishmallow('Avery the Mallard', '5"', 'Farm'),
+  
+   
 ]
 
 def home(request):
-    return HttpResponse('<h1> Binch Boi </h1>')
+    return HttpResponse('<h1> Squish Boi </h1>')
 
 def about(request):
     return render(request, 'about.html')
+
+def squishes_index(request):
+    return render(request, 'squishes/index.html', {'squishes': squishes })
+
+
