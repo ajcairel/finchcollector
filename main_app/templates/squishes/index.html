@@ -9,6 +9,8 @@
       <span class="card-title">{{ squish.name }}</span>
       <p>Size: {{ squish.size }}</p>
       <p>Squad: {{ squish.squad }}</p>
+      <p>Squishdate: {{ squish.squish_date }}</p>
+      <p><a href="{% url 'detail' squish.id %}">Details</a></p>
     </div>
   </div>
 {% endfor %}
