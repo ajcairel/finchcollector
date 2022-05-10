@@ -36,7 +36,6 @@ class Style(models.Model):
         max_length=4,
         choices=KIND
     )
-
     squishmallow = models.ForeignKey(Squishmallow, on_delete=models.CASCADE)
 
     def __str__(self):
