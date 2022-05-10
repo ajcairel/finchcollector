@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse 
+from django.http import HttpResponse
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Squishmallow
+
 
 # Create your views here.
 # Add the Cat class & list and view function below the imports
@@ -19,6 +21,19 @@ def squishes_index(request):
 def squishes_detail(request, squish_id):
     squish = Squishmallow.objects.get(id=squish_id)
     return render(request, 'squishes/detail.html', {'squish': squish})
+
+class SquishCreate(CreateView):
+    model = Squishmallow
+    fields = '__all__'
+
+class SquishUpdate(UpdateView):
+    model = Squishmallow
+    fields = '__all__'
+
+class SquishDelete(DeleteView):
+    model = Squishmallow
+    success_url = '/squishes/'
+
 
 
 

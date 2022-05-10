@@ -11,6 +11,10 @@
         <p>Squad: {{ squish.squad }}</p>
         <p>Squishdate: {{ squish.squish_date }}</p>
       </div>
+      <div class="card-action">
+        <a href="{% url 'squish_update' squish.id %}">Edit</a>
+        <a href="{% url 'squish_delete' squish.id %}">Delete</a>
+      </div>
 </div>
 
 
