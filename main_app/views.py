@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Squishmallow
+from .forms import StyleForm
 
 
 # Create your views here.
@@ -20,7 +21,11 @@ def squishes_index(request):
 
 def squishes_detail(request, squish_id):
     squish = Squishmallow.objects.get(id=squish_id)
-    return render(request, 'squishes/detail.html', {'squish': squish})
+    size_form = StyleForm()
+    return render(request, 'squishes/detail.html', {
+        'squish': squish,
+        'size_form': size_form
+        })
 
 class SquishCreate(CreateView):
     model = Squishmallow
@@ -33,6 +38,18 @@ class SquishUpdate(UpdateView):
 class SquishDelete(DeleteView):
     model = Squishmallow
     success_url = '/squishes/'
+
+def add_size(request, squish_id):
+  # create a ModelForm instance using the data in request.POST
+  form = StyleForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    # don't save the form to the db until it
+    # has the cat_id assigned
+    new_style = form.save(commit=False)
+    new_style.squishmallow_id = squish_id
+    new_style.save()
+  return redirect('detail', squish_id=squish_id)
 
 
 
