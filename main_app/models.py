@@ -19,11 +19,24 @@ KIND = (
     ('F', 'Flip-A-Mallow'),
 )
 # Create your models here.
+class Squad(models.Model):
+  name = models.CharField(max_length=50)
+  # Squads have a M:M related manager named
+  # squishmallow_set
+
+  def __str__(self):
+    return self.name
+
+  def get_absolute_url(self):
+    return reverse('squads_detail', kwargs={'pk': self.id})
+
+
 class Squishmallow(models.Model):
     name = models.CharField(max_length=100)
     #size = models.IntegerField()
     #squad = models.CharField(max_length=100)
     squish_date = models.DateField(auto_now=False)
+    squads = models.ManyToManyField(Squad)
 
     def __str__(self):
         return f'{self.name} ({self.id})'

@@ -29,12 +29,60 @@
       <tbody>
         {% for style in squish.style_set.all %}
           <tr>
-           
             <td>{{style.get_size_display}}</td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+  </div>
+</div>
+</div>
+<hr>
+<div class="row">
+  <div class="col s6">
+    <h3>{{ squish.name }}'s Squads</h3>
+    {% if squish.squads.count %}
+      {% for squad in squish.squads.all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+             {{ squad.name }}
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'unassoc_squad' squish.id squad.id %}" method="POST">
+              {% csrf_token %}
+              <button type="submit" class="btn">Remove</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No Squads Yet!</h5>
+    {% endif %}
+  </div>
+  <!-- Available squads will come after this line -->
+  <div class="col s6">
+    <h3>Available Squads</h3>
+    {% if squads.count %}
+      {% for squad in squads.all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              {{ squad.name }}
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'assoc_squad' squish.id squad.id %}" method="POST">
+              {% csrf_token %}
+              <button type="submit" class="btn">Add</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>{{squish.name}} has no available squads! </h5>
+    {% endif %}
   </div>
 </div>
 
