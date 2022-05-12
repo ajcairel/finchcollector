@@ -35,7 +35,7 @@ def squishes_detail(request, squish_id):
 
 class SquishCreate(CreateView):
     model = Squishmallow
-    fields = '__all__'
+    fields = ['name', 'squish_date']
 
 class SquishUpdate(UpdateView):
     model = Squishmallow
