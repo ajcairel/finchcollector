@@ -31,4 +31,13 @@ body {
   .page-footer {
     background-color: blueviolet;
   }
+
+  form {
+    background-color: blueviolet;
+    color: pink;
+  }
+
+  form label {
+    color: pink;
+  }
      

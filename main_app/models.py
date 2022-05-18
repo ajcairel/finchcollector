@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 KIND = (
     ('3.5', '3.5" Clip On'),
@@ -37,6 +38,7 @@ class Squishmallow(models.Model):
     #squad = models.CharField(max_length=100)
     squish_date = models.DateField(auto_now=False)
     squads = models.ManyToManyField(Squad)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.name} ({self.id})'

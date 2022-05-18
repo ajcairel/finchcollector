@@ -20,10 +20,16 @@
         </ul>
         <ul class="right">
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'squads_create' %}">Add A Squad</a></li>
-          <li><a href="{% url 'squads_index' %}">View All Squads</a></li>
-          <li><a href="{% url 'squish_create' %}">Add Squishmallow</a></li>
-          <li><a href="{% url 'index' %}">View All My Squishes</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'squads_create' %}">Add A Squad</a></li>
+            <li><a href="{% url 'squads_index' %}">View All Squads</a></li>
+            <li><a href="{% url 'squish_create' %}">Add Squishmallow</a></li>
+            <li><a href="{% url 'index' %}">View My Squishes</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+          {% endif %}
         </ul>
       </div>
     </nav>
