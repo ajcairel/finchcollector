@@ -1,1 +1,1 @@
-web: gunicorn finchcollector.wsgi.application.wsgi
+web: gunicorn finchcollector.wsgi
