@@ -52,4 +52,7 @@ body {
   #acquire {
     text-align: center;
   }
-     
+  
+  #logo {
+    font-size:large;
+  }
