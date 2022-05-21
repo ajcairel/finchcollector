@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Delete Squishmallow</h1>
+  <h1>Goodbye {{ object.name }}</h1>
 
-  <h4>Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
+  <div class="card">
+    <div class="card-content">
+        <span class="card-title" id="acquire">Are you sure you want to delete {{ object.name }}?</span>
+    </div>
+  </div>
 
-  <form action="" method="POST">
+  <form action="" method="POST" id="dlt">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
-    <a class="waves-effect waves-light btn"href="{% url 'detail' squishmallow.id %}">Cancel</a>
+    <input type="submit" value="Yes - Delete!" class="btn" id="upload">
+    <a class="waves-effect waves-light btn" id="upload"href="{% url 'detail' squishmallow.id %}">Cancel</a>
   </form>
 {% endblock %}

@@ -7,7 +7,7 @@
         <h1>Add Squishmallow</h1>
     {% endif %}
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
-  <form class="card-panel teal accent-2"action="" method="POST">
+  <form class="card-panel"action="" method="POST">
     <!-- Django requires the following for security purposes -->
     {% csrf_token %}
     <table>
@@ -15,9 +15,9 @@
       {{ form.as_table }}
     </table>
     {% if object %}
-        <input type="submit" value="Update Squishmallow!" class="btn">
+        <input type="submit" value="Update Squishmallow!" class="btn" id="upload">
     {% else %}
-        <input type="submit" value="Add Squishmallow!" class="btn">
+        <input type="submit" value="Add Squishmallow!" class="btn" id="upload">
     {% endif %}
   </form>
 

@@ -8,9 +8,18 @@
     <div class="card-content">
       <span class="card-title">{{ squish.name }}</span>
       <p>Date Acquired: {{ squish.date_acquired }}</p>
-      <p><a href="{% url 'detail' squish.id %}">Details</a></p>
+      <p><a class="btn" id="upload" href="{% url 'detail' squish.id %}">View</a></p>
     </div>
   </div>
+{% empty %}
+<div class="card">
+  <div class="card-content" id="acquire">
+      <span class="card-title" id="acquire">You haven't posted any! </span>
+      <a class="waves-effect waves-light btn-large" id="upload" href="{% url 'squish_create' %}">Add A Squishmallow</a>
+  </div>
+</div>
+
+
 {% endfor %}
 
 {% endblock %}

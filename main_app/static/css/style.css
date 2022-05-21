@@ -41,7 +41,7 @@ body {
   }
 
   form {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     color: pink;
   }
 
@@ -50,6 +50,18 @@ body {
   }
 
   #acquire {
+    text-align: center;
+  }
+
+  #dlt {
+    text-align: center;
+    /* background-color: black; */
+  }
+
+  #add_squish {
+    display: flex;
+    background-color: blueviolet;
+    align-items: center;
     text-align: center;
   }
   
