@@ -10,7 +10,7 @@ urlpatterns = [
     path('squishes/<int:pk>/update/', views.SquishUpdate.as_view(), name='squish_update'),
     path('squishes/<int:pk>/delete/', views.SquishDelete.as_view(), name='squish_delete'),
     path('squishes/<int:squish_id>/add_size/', views.add_size, name='add_size'),
-
+    path('cats/<int:squish_id>/add_photo/', views.add_photo, name='add_photo'),
     path('squishes/<int:squish_id>/assoc_squad/<int:squad_id>/', views.assoc_squad, name='assoc_squad'),
     path('squishes/<int:squish_id>/unassoc_squad/<int:squad_id>/', views.unassoc_squad, name='unassoc_squad'),
     path('squads/', views.SquadList.as_view(), name='squads_index'),

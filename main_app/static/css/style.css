@@ -11,6 +11,10 @@ body {
     background-size: cover;
   }
   
+  h1 {
+    text-align: center;
+  }
+  
   main {
     flex: 1 0 auto;
   }
@@ -28,6 +32,10 @@ body {
     background-color: blueviolet;
   }
 
+  #upload {
+    background-color: blueviolet;
+  }
+
   .page-footer {
     background-color: blueviolet;
   }
@@ -39,5 +47,9 @@ body {
 
   form label {
     color: pink;
+  }
+
+  #acquire {
+    text-align: center;
   }
      

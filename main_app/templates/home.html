@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Home</h1>
+<h1>Welcome To The Squish Collector</h1>
+<br><br>
+<div class="card">
+    <div class="card-content" id="acquire">
+        <span class="card-title" id="acquire">This is a place to track all the squishmallows you have collected. Enjoy.</span>
+        <a class="waves-effect waves-light btn-large" id="upload" href="{% url 'login' %}">Log In</a>
+        <a class="waves-effect waves-light btn-large" id="upload" href="{% url 'signup' %}">Sign Up</a>
+    </div>
+</div>
+
+
+
 
 {% endblock %}

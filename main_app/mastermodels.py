@@ -36,27 +36,15 @@ class Squishmallow(models.Model):
     name = models.CharField(max_length=100)
     #size = models.IntegerField()
     #squad = models.CharField(max_length=100)
-    date_acquired = models.DateField(auto_now=False)
+    squish_date = models.DateField(auto_now=False)
     squads = models.ManyToManyField(Squad)
-    size = models.CharField(
-        max_length=4,
-        choices=KIND
-    )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.get_size_display()}'
+        return f'{self.name} ({self.id})'
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'squish_id': self.id})
-
-
-class Photo(models.Model):
-  url = models.CharField(max_length=200)
-  squish = models.ForeignKey(Squishmallow, on_delete=models.CASCADE)
-  
-  def __str___(self):
-    return f'Photo for squish_id: {self.squish_id} @ {self.url}'
 
 class Style(models.Model):
     size = models.CharField(
@@ -65,10 +53,10 @@ class Style(models.Model):
     )
     squishmallow = models.ForeignKey(Squishmallow, on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     # get_meal_display() will return the human readable 
-    #     # description for the meal field
-    #     return f'{self.get_size_display()} size'
+    def __str__(self):
+        # get_meal_display() will return the human readable 
+        # description for the meal field
+        return f'{self.get_size_display()} size'
     
 
 

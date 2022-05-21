@@ -20,4 +20,18 @@
         <input type="submit" value="Add Squishmallow!" class="btn">
     {% endif %}
   </form>
+
+  <script>
+    const selectEl = document.getElementById('id_size');
+    M.FormSelect.init(selectEl)
+
+    
+  const dateEl = document.getElementById('id_date_acquired');
+  M.Datepicker.init(dateEl, {
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true
+  });
+  </script>
 {% endblock %} 
