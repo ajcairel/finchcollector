@@ -5,11 +5,11 @@
 
   <div class="card">
     <div class="card-content">
-      <h1 class="card-title">Log In!</h1>
+      <h1 class="card-title">Welcome Back!</h1>
       <form method="POST" action="{% url 'login' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" class="btn" value="login" id="upload">
+        <input type="submit" class="btn" value="Log In!" id="upload">
         <input type="hidden" name="next" value="{{ next }}">
       </form>
     </div>
