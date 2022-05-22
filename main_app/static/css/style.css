@@ -42,11 +42,15 @@ body {
 
   form {
     /* background-color: blueviolet; */
-    color: pink;
+    color: red;
+  }
+
+  .card {
+    background-color: rgb(255, 248, 240);
   }
 
   form label {
-    color: pink;
+    color: blueviolet;
   }
 
   #acquire {
@@ -58,12 +62,6 @@ body {
     /* background-color: black; */
   }
 
-  #add_squish {
-    display: flex;
-    background-color: blueviolet;
-    align-items: center;
-    text-align: center;
-  }
   
   #logo {
     font-size:large;
