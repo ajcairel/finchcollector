@@ -42,8 +42,10 @@ body {
 
   form {
     /* background-color: blueviolet; */
-    color: red;
+    color: pink;
   }
+
+  
 
   .card {
     background-color: rgb(255, 248, 240);
