@@ -13,6 +13,7 @@ body {
   
   h1 {
     text-align: center;
+    /* color:blueviolet; */
   }
   
   main {
@@ -50,12 +51,20 @@ body {
   .card {
     background-color: rgb(255, 248, 240);
   }
+  
+  .card-panel {
+    
+    background-color: rgb(255, 248, 240);
+  }
 
   form label {
     color: blueviolet;
   }
 
   #acquire {
+    text-align: center;
+  }
+  #update-back {
     text-align: center;
   }
 

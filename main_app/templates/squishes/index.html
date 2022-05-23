@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Squish List</h1>
+<div class="card">
+  <h1>Squish List</h1>
+  
+</div>
 
 {% for squish in squishes %}
   <div class="card">
@@ -14,7 +17,7 @@
 {% empty %}
 <div class="card">
   <div class="card-content" id="acquire">
-      <span class="card-title" id="acquire">You haven't posted any! </span>
+      <span class="card-title" id="acquire">You haven't posted any! &#128558; </span>
       <a class="waves-effect waves-light btn-large" id="upload" href="{% url 'squish_create' %}">Add A Squishmallow</a>
   </div>
 </div>

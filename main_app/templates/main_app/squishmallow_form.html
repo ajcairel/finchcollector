@@ -2,9 +2,14 @@
 
 {% block content %}
 {% if object %}
-        <h1>Edit <span class="teal-text">{{object.name}}</span></h1>
+        <div class="card">
+          <h1>Edit {{object.name}}</h1>
+        </div>
     {% else %}
+      <div class="card">
         <h1>Add Squishmallow</h1>
+
+    </div>
     {% endif %}
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
   <form class="card-panel"action="" method="POST">
@@ -15,7 +20,11 @@
       {{ form.as_table }}
     </table>
     {% if object %}
-        <input type="submit" value="Update Squishmallow!" class="btn" id="upload">
+        <div id="acquire">
+          <input type="submit" value="Update {{object.name}}" class="btn" id="upload">
+          <input type=button class="btn" id="upload" value="Go Back" onClick="javascript:history.go(-1);">
+
+        </div>
     {% else %}
         <input type="submit" value="Add Squishmallow!" class="btn" id="upload">
     {% endif %}
