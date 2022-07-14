@@ -19,6 +19,15 @@
 
 
 <details>
+<summary> :art: ERD </summary>
+
+| Description | Screenshot |
+|------------ | ------------|
+| <h3 align="center">ERD</h3> | <img src="https://i.imgur.com/PY6w6OZ.png" width="700"/> |
+</details>
+
+
+<details>
 <summary> :gear: Functionality</summary>
 
 | Description | Screenshot |
