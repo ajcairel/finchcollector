@@ -3,7 +3,7 @@
    <h1>:sparkles: Squish Collector :sparkles:</h1>
      <h2>:point_right:<a href="https://vimeo.com/735618174">See A Demo Here</a>:point_left:</h2>
    <h3><a href="https://squishcollector.herokuapp.com/">Visit Here (Heroku **discontinued**)</a></h3>
-   <h3><a href="http://django-env.eba-j6cpgngx.us-west-2.elasticbeanstalk.com/">Visit Here (AWS Elastic Beanstalk) </a></h3>
+   <h3><a href="http://django-env.eba-j6cpgngx.us-west-2.elasticbeanstalk.com/">Visit Here (AWS Elastic Beanstalk **discontinued RIP free tier**) </a></h3>
    <h5>Alexander Cairel</h5>                             
    <a href="https://github.com/ajcairel" target="_blank">
       <img src="https://img.shields.io/badge/-GitHub:ajcairel-darkgreen?style=flat&logo=medium"/>
